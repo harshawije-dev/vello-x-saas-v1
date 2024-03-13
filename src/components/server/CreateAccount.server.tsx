@@ -3,7 +3,7 @@ import { Input } from "../ui/input";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-async function LoginComponent() {
+function CreateAccountComponent() {
   return (
     <div className="py-7 w-[480px]">
       <form action="">
@@ -15,13 +15,16 @@ async function LoginComponent() {
         <div className="mb-3 mx-10 flex flex-col gap-2">
           <Input type="password" placeholder="Password" />
         </div>
+        <div className="mb-3 mx-10 flex flex-col gap-2">
+          <Input type="password" placeholder="Confirm Password" />
+        </div>
         <div className="flex justify-center py-7 mx-10">
           <Button
             type="submit"
             variant={"default"}
             className="w-full capitalize font-semibold text-balance bg-blue-600 hover:bg-blue-300 hover:text-blue-700 hover:border hover:border-blue-700"
           >
-            sign in
+            create account
           </Button>
         </div>
       </form>
@@ -32,10 +35,10 @@ async function LoginComponent() {
         </span>
       </div>
       <div className="flex gap-3 justify-center mx-10 pt-5 items-center">
-        <p className="capitalize text-sm font-medium">new user ?</p>
-        <Link href={"/register"}>
+        <p className="capitalize text-sm font-medium">registered user ?</p>
+        <Link href={".."}>
           <span className="text-blue-500 hover:text-slate-900 underline capitalize text-sm">
-            create new account
+            sign in
           </span>
         </Link>
       </div>
@@ -43,4 +46,4 @@ async function LoginComponent() {
   );
 }
 
-export default LoginComponent;
+export default CreateAccountComponent;
