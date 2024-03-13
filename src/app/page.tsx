@@ -1,7 +1,7 @@
+import DB from "@/config/db.config";
 import React from "react";
 
 export default function Home() {
-  console.log(process.env.COCKROCH_DB_URL);
   return (
     <main className="w-full min-h-screen">
       <div className="container">
